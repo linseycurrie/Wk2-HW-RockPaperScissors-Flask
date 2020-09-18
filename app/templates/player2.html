@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form>
+    <label for="rock">Rock</label>
+    <input type="checkbox" id="rock" name="rock" value="Rock">
+    <label for="paper">Paper</label>
+    <input type="checkbox" id="paper" name="paper" value="Paper">
+    <label for="scissors">Scissors</label>
+    <input type="checkbox" id="scissors" name="scissors" value="Scissors">
+    <input type="submit" value="Submit">
+    <action="/player2/{{ id }}" method="POST">
+</form>
+
+
+
+
+{% endblock %}
