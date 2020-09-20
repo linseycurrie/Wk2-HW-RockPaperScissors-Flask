@@ -3,22 +3,26 @@ from app import app
 from app.models.play_game import *
 from app.models.player import *
 
+
 @app.route('/')
 def index():
-    return render_template('index.html', title='Home')
+    return render_template('index.html', title='Home', players=players)
 
-@app.route('/add-players', methods=['POST'])
-def add_new_players():
+@app.route('/players', methods=['POST'])
+def add_two_players():
     name1 = request.form['name1']
     name2 = request.form['name2']
     add_players(name1, name2)
-    return render_template('/index.html', title='Home')
+    return render_template('/moves.html', title='Home', players=players)
 
-@app.route('/player-moves', methods=['POST'])
-def player1_make_move():
-    print("set move")
-    set_player1_move(move)
-    return render_template('/index.html', title='Home')
+@app.route('/moves', methods=['POST'])
+def two_player_make_moves():
+    move1 = request.form['move1']
+    move2 = request.form['move2']
+    set_moves(move1, move2)
+    return render_template('/result.html', title='Home', players=players)
 
-# @app.route('/player/rock/<name>', methods=['POST'])
-# def player2_make_move():
+@app.route('/result', methods=['POST'])
+def show_the_winner():
+    display_result = result()
+    return render_template('/result.html', title='Home', display_result=display_result)

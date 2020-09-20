@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <form action="/result" method="POST">
+        <input class="submit" type="submit" value="Show the Winner" >
+       
+        
+        <h1>{{ display_result }}</h1>
+ 
+    </form>
+
+{% endblock %}

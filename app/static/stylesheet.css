@@ -1,0 +1,68 @@
+
+body {
+    background-color: dodgerblue;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 25% 20% 40% 20%;
+}
+
+body > div > ul > li {
+    border: darkorchid;
+    background-color: deepskyblue;
+    border-radius: 25px;
+    border-width: 2px;
+    border-style: solid;
+    list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body > div > ul > li > a {
+    margin-left: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div > h2 {
+    grid-column-start: 3;
+}
+
+body > h6 {
+    display: grid;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-image: url(../static/header_logo.jpeg);
+    padding: 1px;
+}
+
+#enter_name{
+    margin: 80px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: medium;
+    padding: 10px;
+}
+
+.submit {
+    border: darkorchid;
+    background-color: lemonchiffon;
+    border-radius: 35px;
+    border-width: 2px;
+    font-family: fantasy;
+    grid-row-start: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin: 80px;
+    padding: 40px;
+} 
+
+body > div > form > label {
+    font-family: 'Architects Daughter', cursive;
+    font-size: medium;
+}
+
+#form {
+    margin: 80px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: medium;
+}
+
+

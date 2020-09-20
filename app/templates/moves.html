@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/moves" method="POST" id="form">   
+    <label for="move1">{{players[0].name}} make your Move : </label>
+    <input type="text" id="move1" name="move1" value="">
+    <br>
+    <br>
+    <br>
+    <label for="move2">{{players[1].name}} make your Move : </label>
+    <input type="text" id="move2" name="move2" value="">
+    <br>
+    <br>
+    <br>
+    <input type="submit" value="Submit" class="submit">
+</form>
+
+
+
+{% endblock %}
